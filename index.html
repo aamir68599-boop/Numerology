@@ -3,21 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Numerology Masterclass</title>
+<title>Numerology Consultation</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 
 *{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Poppins;background:#0b0c12;color:white;}
 
-body{
-font-family:Poppins;
-background:#0c0d14;
-color:white;
-}
+.container{max-width:1200px;margin:auto;padding:20px;}
 
-/* TOP BAR */
 .topbar{
 background:#ff6a00;
 text-align:center;
@@ -27,70 +23,28 @@ font-weight:600;
 
 /* HERO */
 .hero{
-padding:100px 20px;
-background: radial-gradient(circle at top,#1a1c29,#0c0d14);
-}
-
-.container{
-max-width:1200px;
-margin:auto;
-}
-
-.hero-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-}
-
-.hero h1{
-font-size:46px;
-line-height:1.2;
-margin-bottom:20px;
-}
-
-.sub{
-color:#aaa;
-font-size:18px;
-margin-bottom:30px;
-}
-
-/* BUTTON */
-.btn{
-background:linear-gradient(45deg,#ff6a00,#ff2d55);
-padding:16px 40px;
-border-radius:50px;
-font-weight:600;
-text-decoration:none;
-color:white;
-display:inline-block;
-box-shadow:0 0 20px rgba(255,100,0,0.5);
-transition:0.3s;
-}
-
-.btn:hover{
-transform:scale(1.05);
-}
-
-/* HERO IMAGE */
-.hero img{
-width:100%;
-border-radius:15px;
-box-shadow:0 0 40px rgba(255,100,0,0.4);
-}
-
-/* SECTION */
-section{
-padding:90px 20px;
+background: radial-gradient(circle at top,#1a1c29,#0b0c12);
+padding:120px 20px;
 text-align:center;
 }
 
-h2{
-font-size:38px;
-margin-bottom:40px;
+.hero h1{font-size:48px;margin-bottom:20px;}
+.hero p{color:#bbb;font-size:18px;}
+
+.btn{
+background:linear-gradient(45deg,#ff6a00,#ff2d55);
+padding:15px 40px;
+border-radius:50px;
+border:none;
+color:white;
+font-size:18px;
+cursor:pointer;
+margin-top:25px;
 }
 
-/* CARDS */
+/* SECTIONS */
+section{padding:80px 20px;text-align:center;}
+
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -101,41 +55,61 @@ gap:30px;
 background:#141622;
 padding:30px;
 border-radius:15px;
-border:1px solid rgba(255,100,0,0.2);
 }
 
-/* COUNTDOWN BAR */
+/* TESTIMONIAL */
+.testimonial{
+background:#141622;
+padding:40px;
+border-radius:15px;
+max-width:700px;
+margin:auto;
+}
+
+/* FOOTER */
+footer{
+background:#07080d;
+padding:40px;
+text-align:center;
+}
+
+/* POPUP FORM */
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+display:none;
+justify-content:center;
+align-items:center;
+}
+
+.form-box{
+background:#11131d;
+padding:40px;
+border-radius:15px;
+text-align:center;
+width:350px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:6px;
+border:none;
+}
+
+/* STICKY CTA */
 .sticky{
 position:fixed;
 bottom:0;
 width:100%;
-background:#0b0c12;
-padding:20px;
-display:flex;
-justify-content:center;
-align-items:center;
-gap:40px;
-box-shadow:0 -5px 20px black;
-}
-
-.timer{
-font-size:28px;
-font-weight:bold;
-color:#ff6a00;
-}
-
-footer{
-background:#08090f;
-padding:30px;
+background:black;
+padding:15px;
 text-align:center;
-margin-top:50px;
-}
-
-@media(max-width:900px){
-.hero-grid{
-grid-template-columns:1fr;
-text-align:center;
-}
 }
 
 </style>
@@ -144,51 +118,38 @@ text-align:center;
 <body>
 
 <div class="topbar">
-⚡ Limited Seats — Offer Ends Soon
+Limited Offer — Free Numerology Consultation Today!
 </div>
 
 <!-- HERO -->
 <section class="hero">
-<div class="container hero-grid">
-
-<div>
-<h1>Become a Numerology Expert From Zero</h1>
-<p class="sub">
-Learn destiny numbers, success timing & practical remedies step-by-step.
-</p>
-<a class="btn">Register Now</a>
-</div>
-
-<div>
-<img src="https://i.imgur.com/Q7ZVZ5H.png">
-</div>
-
+<div class="container">
+<h1>Unlock Your Destiny Through Numerology</h1>
+<p>Discover your life path, career timing & relationship success.</p>
+<button class="btn" onclick="openForm()">Get Free Reading</button>
 </div>
 </section>
 
 <!-- BENEFITS -->
 <section>
 <div class="container">
-<h2>What You Will Learn</h2>
+<h2>What You Will Discover</h2>
 
 <div class="cards">
-
-<div class="card">
-<h3>Life Path Reading</h3>
-<p>Decode personality & life purpose.</p>
-</div>
-
-<div class="card">
-<h3>Career Timing</h3>
-<p>Find best success periods.</p>
-</div>
-
-<div class="card">
-<h3>Love Compatibility</h3>
-<p>Check relationship match.</p>
+<div class="card"><h3>Life Path Number</h3><p>Know your true purpose.</p></div>
+<div class="card"><h3>Career Success Timing</h3><p>Find best growth years.</p></div>
+<div class="card"><h3>Love Compatibility</h3><p>Understand relationship match.</p></div>
 </div>
 
 </div>
+</section>
+
+<!-- EXPERT -->
+<section>
+<div class="container">
+<h2>Meet Your Numerology Expert</h2>
+<p>10+ years experience helping thousands of people transform their lives.</p>
+<button class="btn" onclick="openForm()">Talk to Expert</button>
 </div>
 </section>
 
@@ -197,47 +158,58 @@ Learn destiny numbers, success timing & practical remedies step-by-step.
 <div class="container">
 <h2>Success Stories</h2>
 
-<div class="card">
-<p>
-“This numerology training changed my career and gave me clarity.”
-</p>
+<div class="testimonial">
+<p>"This numerology consultation gave me clarity about career and relationships."</p>
 <br>
-<strong>— Verified Student</strong>
+<strong>— Happy Client</strong>
 </div>
 
 </div>
 </section>
 
+<!-- FINAL CTA -->
+<section>
+<div class="container">
+<h2>Get Your Free Personalized Report Today</h2>
+<button class="btn" onclick="openForm()">Book My Reading</button>
+</div>
+</section>
+
 <footer>
-© 2026 Numerology Masterclass
+<p>© 2026 Numerology Consultation | All Rights Reserved</p>
 </footer>
 
-<!-- COUNTDOWN -->
-<div class="sticky">
+<!-- POPUP FORM -->
+<div class="popup" id="popup">
 
-<div>
-Offer Ending In:
-<span class="timer" id="time">10:00</span>
+<div class="form-box">
+<h3>Get Your Free Reading</h3>
+
+<input placeholder="Your Name">
+<input placeholder="Phone Number">
+<input placeholder="Email">
+
+<button class="btn">Submit</button>
+<br><br>
+<button onclick="closeForm()">Close</button>
 </div>
 
-<a class="btn">Book Seat Now</a>
+</div>
 
+<!-- STICKY CTA -->
+<div class="sticky">
+<button class="btn" onclick="openForm()">Claim Free Reading</button>
 </div>
 
 <script>
 
-let time = 600;
+function openForm(){
+document.getElementById("popup").style.display="flex";
+}
 
-setInterval(()=>{
-let m = Math.floor(time/60);
-let s = time%60;
-
-document.getElementById("time").innerHTML =
-`${m}:${s<10?"0"+s:s}`;
-
-time--;
-
-},1000);
+function closeForm(){
+document.getElementById("popup").style.display="none";
+}
 
 </script>
 

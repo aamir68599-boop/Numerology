@@ -3,91 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Numerology Consultation</title>
+<title>Numerology Masterclass</title>
 
 <style>
 
 body{
 margin:0;
 font-family:Arial;
-background:#0b0b1e;
+background:#0d0d1f;
 color:white;
 }
 
-section{
-padding:80px 20px;
+/* TOP BAR */
+.topbar{
+background:#ff6a00;
+padding:12px;
 text-align:center;
-}
-
-.container{
-max-width:1100px;
-margin:auto;
-}
-
-h1{font-size:48px;}
-h2{font-size:36px;}
-
-.btn{
-background:#ff2ca5;
-padding:15px 35px;
-border-radius:8px;
-color:white;
-text-decoration:none;
-display:inline-block;
-margin-top:20px;
 font-weight:bold;
 }
 
+/* HERO */
 .hero{
-background:linear-gradient(45deg,#5f00ff,#a800ff);
-padding:130px 20px;
+padding:100px 20px;
+text-align:center;
+background:linear-gradient(45deg,#1a1a2e,#000);
 }
 
-.features{
-display:flex;
-flex-wrap:wrap;
-gap:30px;
-justify-content:center;
+h1{
+font-size:48px;
+margin-bottom:20px;
 }
 
-.card{
-background:#1c1c3a;
-padding:30px;
-border-radius:12px;
-width:300px;
+.sub{
+font-size:20px;
+color:#ddd;
 }
 
-.steps{
-display:flex;
-gap:30px;
-flex-wrap:wrap;
-justify-content:center;
+/* CTA BUTTON */
+.btn{
+background:#ff6a00;
+padding:16px 40px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+font-size:20px;
+display:inline-block;
+margin-top:30px;
 }
 
-.step{
-background:#161632;
-padding:30px;
-border-radius:12px;
-width:250px;
-}
-
-.testimonial{
-background:#121229;
-padding:50px;
-border-radius:12px;
-}
-
-input{
-padding:15px;
-width:80%;
-margin:10px;
-border-radius:6px;
-border:none;
-}
-
-footer{
+/* COUNTDOWN BAR */
+.countdown-section{
+position:fixed;
+bottom:0;
+width:100%;
 background:black;
-padding:30px;
+padding:25px;
+text-align:center;
+box-shadow:0 -5px 20px rgba(0,0,0,0.6);
+}
+
+.timer{
+font-size:28px;
+margin:15px;
 }
 
 </style>
@@ -95,105 +72,55 @@ padding:30px;
 
 <body>
 
-<!-- HERO -->
+<div class="topbar">
+Want to Learn Numerology & Fix Life Problems?
+</div>
+
 <section class="hero">
-<div class="container">
-<h1>Unlock Your Destiny Through Numerology</h1>
-<p>Personalized life path analysis & remedies within 24 hours</p>
-<a class="btn">Book Your Consultation</a>
-</div>
+<h1>From Zero To Numerology Expert</h1>
+<p class="sub">
+Learn Life Path Numbers, Destiny Secrets & Success Timing Step-By-Step
+</p>
+
+<a href="#" class="btn">Register Now</a>
 </section>
 
-<!-- BENEFITS -->
-<section>
-<div class="container">
-<h2>What You Will Get</h2>
+<!-- COUNTDOWN -->
+<div class="countdown-section">
 
-<div class="features">
-<div class="card">
-<h3>Life Path Number</h3>
-<p>Understand your purpose & strengths.</p>
-</div>
+<h2>Offer Will Expire In</h2>
 
-<div class="card">
-<h3>Success Timing</h3>
-<p>Know best time for career & business.</p>
+<div class="timer">
+<span id="minutes">00</span> Minutes :
+<span id="seconds">00</span> Seconds
 </div>
 
-<div class="card">
-<h3>Personal Remedies</h3>
-<p>Simple daily actions for success.</p>
-</div>
-</div>
-</div>
-</section>
+<a href="#" class="btn">Book Your Seat</a>
 
-<!-- EXPERT -->
-<section>
-<div class="container">
-<h2>Meet Your Numerology Expert</h2>
-<p>10+ years experience helping thousands of people unlock success and remove life obstacles.</p>
-<a class="btn">Talk to Expert</a>
-</div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section>
-<div class="container">
-<h2>How It Works</h2>
-
-<div class="steps">
-<div class="step">
-<h3>1. Fill Details</h3>
-<p>Enter your name & date of birth.</p>
 </div>
 
-<div class="step">
-<h3>2. Get Analysis</h3>
-<p>We decode your destiny numbers.</p>
-</div>
+<script>
 
-<div class="step">
-<h3>3. Receive Remedies</h3>
-<p>Easy daily actions for success.</p>
-</div>
-</div>
-</div>
-</section>
+// Set countdown time (10 minutes)
+let time = 600;
 
-<!-- TESTIMONIAL -->
-<section>
-<div class="container testimonial">
-<h2>Happy Clients</h2>
-<p>"This numerology reading changed my life and gave clarity about career decisions."</p>
-<strong>– Verified Client</strong>
-</div>
-</section>
+const countdown = setInterval(() => {
 
-<!-- FORM -->
-<section>
-<div class="container">
-<h2>Get Your Free Prediction</h2>
+let minutes = Math.floor(time / 60);
+let seconds = time % 60;
 
-<input placeholder="Your Name">
-<br>
-<input type="date">
-<br>
-<a class="btn">Check My Numbers</a>
-</div>
-</section>
+document.getElementById("minutes").innerHTML = minutes.toString().padStart(2,'0');
+document.getElementById("seconds").innerHTML = seconds.toString().padStart(2,'0');
 
-<!-- FINAL CTA -->
-<section style="background:#a800ff;">
-<div class="container">
-<h2>Limited Offer – Book Today</h2>
-<a class="btn">Start Now</a>
-</div>
-</section>
+time--;
 
-<footer>
-<p>© 2026 Numerology Consultation</p>
-</footer>
+if(time < 0){
+clearInterval(countdown);
+}
+
+},1000);
+
+</script>
 
 </body>
 </html>

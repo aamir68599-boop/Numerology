@@ -3,25 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Numerology Reading</title>
+<title>Numerology Consultation</title>
 
 <style>
 
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#0c0c1d;
+font-family:Arial;
+background:#0b0b1e;
 color:white;
-line-height:1.6;
 }
 
 section{
-padding:70px 20px;
+padding:80px 20px;
 text-align:center;
-}
-
-h1,h2{
-margin-bottom:20px;
 }
 
 .container{
@@ -29,30 +24,25 @@ max-width:1100px;
 margin:auto;
 }
 
+h1{font-size:48px;}
+h2{font-size:36px;}
+
 .btn{
-background:#ff5fd2;
+background:#ff2ca5;
 padding:15px 35px;
-border:none;
-color:white;
-font-size:18px;
 border-radius:8px;
-cursor:pointer;
+color:white;
 text-decoration:none;
 display:inline-block;
 margin-top:20px;
+font-weight:bold;
 }
 
-/* HERO */
 .hero{
-background:linear-gradient(45deg,#4a00e0,#8e2de2);
-padding:120px 20px;
+background:linear-gradient(45deg,#5f00ff,#a800ff);
+padding:130px 20px;
 }
 
-.hero h1{
-font-size:50px;
-}
-
-/* FEATURES */
 .features{
 display:flex;
 flex-wrap:wrap;
@@ -61,46 +51,42 @@ justify-content:center;
 }
 
 .card{
-background:#1b1b3d;
+background:#1c1c3a;
 padding:30px;
-width:300px;
 border-radius:12px;
+width:300px;
 }
 
-/* TESTIMONIAL */
+.steps{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.step{
+background:#161632;
+padding:30px;
+border-radius:12px;
+width:250px;
+}
+
 .testimonial{
-background:#151530;
+background:#121229;
 padding:50px;
 border-radius:12px;
 }
 
-/* PRICING */
-.pricing{
-display:flex;
-gap:30px;
-justify-content:center;
-flex-wrap:wrap;
-}
-
-.price-box{
-background:#1b1b3d;
-padding:40px;
-width:280px;
-border-radius:12px;
-}
-
-/* FORM */
 input{
 padding:15px;
 width:80%;
 margin:10px;
-border:none;
 border-radius:6px;
+border:none;
 }
 
-/* FOOTER */
 footer{
-background:#000;
+background:black;
 padding:30px;
 }
 
@@ -112,31 +98,64 @@ padding:30px;
 <!-- HERO -->
 <section class="hero">
 <div class="container">
-<h1>Discover Your Destiny Through Numerology</h1>
-<p>Unlock your life path, success number & hidden powers instantly</p>
-<a href="#" class="btn">Get Your Free Reading</a>
+<h1>Unlock Your Destiny Through Numerology</h1>
+<p>Personalized life path analysis & remedies within 24 hours</p>
+<a class="btn">Book Your Consultation</a>
 </div>
 </section>
 
-<!-- FEATURES -->
+<!-- BENEFITS -->
 <section>
 <div class="container">
-<h2>What You Will Discover</h2>
+<h2>What You Will Get</h2>
 
 <div class="features">
 <div class="card">
 <h3>Life Path Number</h3>
-<p>Know your purpose and strengths.</p>
+<p>Understand your purpose & strengths.</p>
 </div>
 
 <div class="card">
-<h3>Love Compatibility</h3>
-<p>Find perfect match using numbers.</p>
+<h3>Success Timing</h3>
+<p>Know best time for career & business.</p>
 </div>
 
 <div class="card">
-<h3>Career Prediction</h3>
-<p>Understand success timing.</p>
+<h3>Personal Remedies</h3>
+<p>Simple daily actions for success.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- EXPERT -->
+<section>
+<div class="container">
+<h2>Meet Your Numerology Expert</h2>
+<p>10+ years experience helping thousands of people unlock success and remove life obstacles.</p>
+<a class="btn">Talk to Expert</a>
+</div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section>
+<div class="container">
+<h2>How It Works</h2>
+
+<div class="steps">
+<div class="step">
+<h3>1. Fill Details</h3>
+<p>Enter your name & date of birth.</p>
+</div>
+
+<div class="step">
+<h3>2. Get Analysis</h3>
+<p>We decode your destiny numbers.</p>
+</div>
+
+<div class="step">
+<h3>3. Receive Remedies</h3>
+<p>Easy daily actions for success.</p>
 </div>
 </div>
 </div>
@@ -145,31 +164,36 @@ padding:30px;
 <!-- TESTIMONIAL -->
 <section>
 <div class="container testimonial">
-<h2>What Our Clients Say</h2>
-<p>"This numerology report changed my life and helped me choose the right career path!"</p>
-<strong>– Rahul Sharma</strong>
+<h2>Happy Clients</h2>
+<p>"This numerology reading changed my life and gave clarity about career decisions."</p>
+<strong>– Verified Client</strong>
 </div>
 </section>
 
-<!-- PRICING -->
+<!-- FORM -->
 <section>
 <div class="container">
-<h2>Choose Your Plan</h2>
+<h2>Get Your Free Prediction</h2>
 
-<div class="pricing">
-
-<div class="price-box">
-<h3>Basic Report</h3>
-<h1>₹499</h1>
-<p>Life Path + Personality</p>
-<a class="btn">Buy Now</a>
+<input placeholder="Your Name">
+<br>
+<input type="date">
+<br>
+<a class="btn">Check My Numbers</a>
 </div>
+</section>
 
-<div class="price-box">
-<h3>Premium Report</h3>
-<h1>₹999</h1>
-<p>Full Destiny Analysis</p>
-<a class="btn">Buy Now</a>
+<!-- FINAL CTA -->
+<section style="background:#a800ff;">
+<div class="container">
+<h2>Limited Offer – Book Today</h2>
+<a class="btn">Start Now</a>
 </div>
+</section>
 
-</d
+<footer>
+<p>© 2026 Numerology Consultation</p>
+</footer>
+
+</body>
+</html>
